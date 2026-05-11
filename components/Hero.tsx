@@ -2,6 +2,8 @@
 import { copy, Lang } from '@/data/content';
 import { whatsappLink, packageMessage } from '@/lib/whatsapp';
 import { ImageCarouselHero } from "@/components/ui/ai-image-generator-hero";
+import { AuroraHero } from "@/components/ui/hero-2";
+import { Reveal } from "@/components/ui/reveal";
 
 export default function Hero({lang}:{lang:Lang}){
   const c = copy[lang];
@@ -61,14 +63,18 @@ export default function Hero({lang}:{lang:Lang}){
   ];
 
   return (
-    <ImageCarouselHero
-      title={c.heroTitle}
-      subtitle={c.heroBadge}
-      description={c.heroText}
-      ctaText={c.cta}
-      onCtaClick={() => window.location.href = whatsappLink(packageMessage())}
-      images={demoImages}
-      features={features}
-    />
+    <AuroraHero>
+      <Reveal delay={0.2}>
+        <ImageCarouselHero
+          title={c.heroTitle}
+          subtitle={c.heroBadge}
+          description={c.heroText}
+          ctaText={c.cta}
+          onCtaClick={() => window.location.href = whatsappLink(packageMessage())}
+          images={demoImages}
+          features={features}
+        />
+      </Reveal>
+    </AuroraHero>
   );
 }
