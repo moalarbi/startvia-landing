@@ -49,6 +49,24 @@ body {
   color: #120E45; 
   background: #f7f4ff; 
   font-family: 'Thmanyah', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 * { box-sizing: border-box; }
 .glass { background: rgba(255,255,255,.74); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.82); }
