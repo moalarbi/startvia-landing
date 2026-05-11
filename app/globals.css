@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { 
+  margin: 0; 
+  color: #120E45; 
+  background: #f7f4ff; 
+  font-family: 'Thmanyah', sans-serif;
+}
+* { box-sizing: border-box; }
+.glass { background: rgba(255,255,255,.74); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.82); }
+.gradient-page { background: radial-gradient(circle at 15% 10%, #dcd4ff 0, transparent 30%), radial-gradient(circle at 80% 0%, #c9c0ff 0, transparent 28%), linear-gradient(180deg,#f4f0ff 0%,#fff 46%,#f8f6ff 100%); }
+.card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 70px rgba(31, 23, 86, .16); }
