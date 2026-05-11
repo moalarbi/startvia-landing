@@ -2,79 +2,79 @@ export type Lang = 'en' | 'ar';
 
 export const copy = {
   en: {
-    nav: ['Services','Company Types','Pricing','Process','FAQ'],
-    cta: 'Start on WhatsApp',
-    heroBadge: 'Professional U.S. Formation',
-    heroTitle: 'Launch your U.S. business with expert guidance.',
-    heroText: 'From EIN acquisition to annual compliance, we provide the specialized support founders need to establish a legitimate U.S. presence.',
-    viewPackages: 'View Packages',
-    trust: ['Direct WhatsApp Support','EIN & Tax ID Guidance','Registered Agent Coordination','Annual Compliance Tracking'],
-    companyTitle: 'Strategic Company Structures',
-    companyText: 'Selecting the right entity is critical for tax efficiency and liability protection. We guide you through the best options for your business model.',
-    howTitle: 'Our Streamlined Process',
-    pricingTitle: 'Transparent Formation Packages',
-    pricingText: 'Professional service fees. State filing fees are handled separately based on your chosen jurisdiction.',
-    addTitle: 'Specialized Services',
-    whyTitle: 'Why Founders Choose Startvia',
-    faqTitle: 'Expert Insights',
-    finalTitle: 'Ready to establish your U.S. entity?',
-    finalText: 'Connect with our specialists on WhatsApp for a personalized formation strategy.',
-    disclaimer: 'Startvia provides administrative formation support and coordination. We are not a law firm and do not provide legal, tax, or financial advice.'
+    nav: ['Solutions','Entity Types','Pricing','Methodology','Insights'],
+    cta: 'Consult on WhatsApp',
+    heroBadge: 'Institutional-Grade U.S. Formation',
+    heroTitle: 'Build your U.S. business infrastructure with precision.',
+    heroText: 'Startvia provides the legal and administrative framework required for international founders to scale. We handle the complexity of U.S. regulations so you can focus on global growth.',
+    viewPackages: 'Explore Solutions',
+    trust: ['Strategic Tax ID (EIN) Support','Registered Agent Infrastructure','Annual Compliance Governance','Banking Resolution Readiness'],
+    companyTitle: 'Strategic Entity Architecture',
+    companyText: 'Choosing the right legal structure is the foundation of your global expansion. We provide the technical clarity needed to select the optimal jurisdiction and entity type.',
+    howTitle: 'Our Methodology',
+    pricingTitle: 'Transparent Investment Tiers',
+    pricingText: 'Professional engagement fees for comprehensive formation. State-specific filing fees are managed independently to ensure maximum transparency.',
+    addTitle: 'Specialized Infrastructure',
+    whyTitle: 'The Startvia Advantage',
+    faqTitle: 'Strategic FAQ',
+    finalTitle: 'Ready to architect your U.S. presence?',
+    finalText: 'Engage with our formation specialists via WhatsApp for a tailored institutional setup.',
+    disclaimer: 'Startvia is a professional formation service provider. We are not a law firm or a CPA firm, and do not provide legal, tax, or financial advice.'
   },
   ar: {
-    nav: ['الخدمات','أنواع الشركات','الباقات','طريقة العمل','الأسئلة'],
-    cta: 'ابدأ عبر واتساب',
-    heroBadge: 'تأسيس احترافي في أمريكا',
-    heroTitle: 'أطلق مشروعك في أمريكا بإرشاد الخبراء.',
-    heroText: 'من استخراج الرقم الضريبي (EIN) إلى الامتثال السنوي، نقدم الدعم المتخصص الذي يحتاجه المؤسسون لبناء كيان قانوني قوي في الولايات المتحدة.',
-    viewPackages: 'عرض الباقات',
-    trust: ['دعم مباشر عبر واتساب','إرشاد الرقم الضريبي EIN','تنسيق الوكيل المسجل','متابعة الامتثال السنوي'],
-    companyTitle: 'هياكل شركات استراتيجية',
-    companyText: 'اختيار الكيان الصحيح أمر بالغ الأهمية للكفاءة الضريبية وحماية المسؤولية. نرشدك عبر أفضل الخيارات لنماذج الأعمال المختلفة.',
-    howTitle: 'مسار العمل المعتمد',
-    pricingTitle: 'باقات تأسيس شفافة',
-    pricingText: 'رسوم الخدمة المهنية. يتم سداد رسوم الولاية بشكل منفصل بناءً على الولاية المختارة.',
-    addTitle: 'خدمات متخصصة',
-    whyTitle: 'لماذا يختارنا المؤسسون؟',
-    faqTitle: 'إجابات الخبراء',
-    finalTitle: 'جاهز لتأسيس كيانك في أمريكا؟',
-    finalText: 'تواصل مع مختصينا عبر واتساب للحصول على استراتيجية تأسيس مخصصة.',
-    disclaimer: 'تقدم Startvia الدعم الإداري والتنسيق للتأسيس. نحن لسنا مكتب محاماة ولا نقدم استشارات قانونية أو ضريبية أو مالية.'
+    nav: ['الحلول','أنواع الكيانات','الباقات','المنهجية','الأسئلة'],
+    cta: 'استشارة عبر واتساب',
+    heroBadge: 'تأسيس مؤسسي بمعايير عالمية',
+    heroTitle: 'ابنِ البنية التحتية لأعمالك في أمريكا بدقة متناهية.',
+    heroText: 'توفر Startvia الإطار القانوني والإداري اللازم للمؤسسين الدوليين للتوسع عالمياً. نحن نتولى تعقيدات الأنظمة الأمريكية لتتفرغ أنت لنمو مشروعك.',
+    viewPackages: 'استكشف الحلول',
+    trust: ['دعم استراتيجي للرقم الضريبي EIN','بنية تحتية للوكيل المسجل','حوكمة الامتثال السنوي','جاهزية قرارات فتح الحسابات'],
+    companyTitle: 'هندسة الكيانات الاستراتيجية',
+    companyText: 'اختيار الهيكل القانوني الصحيح هو حجر الأساس لتوسعك العالمي. نحن نوفر الوضوح التقني اللازم لاختيار الولاية ونوع الكيان الأمثل.',
+    howTitle: 'منهجية العمل',
+    pricingTitle: 'مستويات الاستثمار الشفافة',
+    pricingText: 'رسوم التعاقد المهني للتأسيس الشامل. يتم إدارة رسوم إيداع الولايات بشكل مستقل لضمان أقصى درجات الشفافية.',
+    addTitle: 'بنية تحتية متخصصة',
+    whyTitle: 'ميزة Startvia',
+    faqTitle: 'أسئلة استراتيجية',
+    finalTitle: 'جاهز لهندسة تواجدك في أمريكا؟',
+    finalText: 'تواصل مع أخصائيي التأسيس لدينا عبر واتساب للحصول على إعداد مؤسسي مخصص.',
+    disclaimer: 'Startvia هي مزود خدمات تأسيس مهنية. نحن لسنا مكتب محاماة أو مكتب محاسبة قانوني، ولا نقدم استشارات قانونية أو ضريبية أو مالية.'
   }
 };
 
 export const companyTypes = [
-  { key:'LLC', en:'Ideal for digital nomads and ecommerce. Offers pass-through taxation and flexible management.', ar:'مثالية للتجارة الإلكترونية. توفر مرونة ضريبية وإدارية عالية للمؤسسين.' },
-  { key:'C-Corp', en:'The gold standard for VC-backed startups. Required for issuing stock and raising institutional capital.', ar:'المعيار الذهبي للشركات الناشئة. ضرورية لإصدار الأسهم وجذب الاستثمارات الجريئة.' },
-  { key:'S-Corp', en:'A tax designation for corporations that meet specific IRS requirements to avoid double taxation.', ar:'تصنيف ضريبي للشركات التي تستوفي شروط IRS لتجنب الازدواج الضريبي.' },
-  { key:'Nonprofit', en:'Structured for 501(c)(3) status. Designed for charitable, educational, or religious purposes.', ar:'مصممة للحصول على إعفاء ضريبي 501(c)(3) للأغراض الخيرية والتعليمية.' },
+  { key:'LLC', en:'Optimized for operational flexibility and pass-through tax efficiency. Ideal for digital-first enterprises.', ar:'محسنة للمرونة التشغيلية والكفاءة الضريبية. مثالية للمشاريع الرقمية والناشئة.' },
+  { key:'C-Corp', en:'The institutional standard for venture scalability. Essential for equity issuance and global capital raising.', ar:'المعيار المؤسسي للتوسع الاستثماري. ضرورية لإصدار الأسهم وجذب رؤوس الأموال العالمية.' },
+  { key:'S-Corp', en:'A specialized tax designation for eligible entities seeking to optimize corporate tax liabilities.', ar:'تصنيف ضريبي متخصص للكيانات المؤهلة التي تسعى لتحسين الالتزامات الضريبية للشركات.' },
+  { key:'Nonprofit', en:'Structured for 501(c)(3) compliance. Designed for mission-driven global initiatives and associations.', ar:'مصممة للامتثال لمعايير 501(c)(3) للمبادرات والجمعيات العالمية ذات الأهداف السامية.' },
 ];
 
 export const packages = [
-  { name:'Essential Formation', price:'$199', popular:false, en:'Basic legal formation for solo founders.', ar:'التأسيس القانوني الأساسي للمؤسس الفردي.', featuresEn:['Articles of Organization filing','State selection strategy','WhatsApp advisory','Initial document review','Post-filing guidance'], featuresAr:['إيداع مستندات التأسيس','استراتيجية اختيار الولاية','استشارات عبر واتساب','مراجعة أولية للمستندات','إرشاد ما بعد التأسيس'] },
-  { name:'Professional Setup', price:'$399', popular:true, en:'Complete setup with tax ID and compliance.', ar:'تجهيز كامل مع الرقم الضريبي والامتثال.', featuresEn:['Everything in Essential','EIN (Tax ID) acquisition support','Operating Agreement drafting','Initial compliance setup','Priority WhatsApp access'], featuresAr:['كل ما في الباقة الأساسية','دعم استخراج الرقم الضريبي EIN','صياغة اتفاقية التشغيل','إعداد الامتثال الأولي','أولوية التواصل عبر واتساب'] },
-  { name:'Enterprise Launch', price:'$699', popular:false, en:'Full-service launch for global entities.', ar:'خدمة كاملة للانطلاق للكيانات العالمية.', featuresEn:['Everything in Professional','Registered Agent coordination','U.S. Business Address setup','Banking resolution documents','Annual report reminders','Dedicated account manager'], featuresAr:['كل ما في الباقة الاحترافية','تنسيق الوكيل المسجل','إعداد العنوان التجاري الأمريكي','مستندات فتح الحساب البنكي','تنبيهات التقارير السنوية','مدير حساب مخصص'] },
+  { name:'Core Formation', price:'$199', popular:false, en:'Essential legal architecture for solo founders.', ar:'الهيكلة القانونية الأساسية للمؤسسين الأفراد.', featuresEn:['Articles of Organization filing','Jurisdictional selection strategy','WhatsApp advisory access','Initial compliance roadmap','Post-formation guidance'], featuresAr:['إيداع مستندات التأسيس','استراتيجية اختيار الولاية','وصول استشاري عبر واتساب','خارطة طريق الامتثال الأولي','إرشاد ما بعد التأسيس'] },
+  { name:'Professional Infrastructure', price:'$399', popular:true, en:'Comprehensive setup for scaling businesses.', ar:'إعداد شامل للشركات الطموحة للتوسع.', featuresEn:['Everything in Core','EIN (Tax ID) acquisition support','Operating Agreement architecture','Governance framework setup','Priority specialist access'], featuresAr:['كل ما في الباقة الأساسية','دعم استخراج الرقم الضريبي EIN','هندسة اتفاقية التشغيل','إعداد إطار الحوكمة','أولوية الوصول للمختصين'] },
+  { name:'Institutional Launch', price:'$699', popular:false, en:'Full-service deployment for global entities.', ar:'نشر الخدمة الكاملة للكيانات العالمية.', featuresEn:['Everything in Professional','Registered Agent infrastructure','U.S. Nexus & Address setup','Banking resolution framework','Annual compliance governance','Dedicated relationship manager'], featuresAr:['كل ما في الباقة الاحترافية','بنية تحتية للوكيل المسجل','إعداد العنوان التجاري الأمريكي','إطار قرارات فتح الحسابات','حوكمة الامتثال السنوي','مدير علاقات مخصص'] },
 ];
 
 export const steps = [
   { en:'Strategic Consultation', ar:'استشارة استراتيجية' },
-  { en:'Entity Selection', ar:'اختيار نوع الكيان' },
-  { en:'Document Preparation', ar:'تجهيز المستندات' },
-  { en:'Official Filing', ar:'الإيداع الرسمي' },
+  { en:'Architecture Design', ar:'تصميم الهيكل القانوني' },
+  { en:'Regulatory Filing', ar:'الإيداع التنظيمي' },
+  { en:'Operational Readiness', ar:'الجاهزية التشغيلية' },
 ];
 
 export const addOns = [
-  ['EIN Acquisition','استخراج الرقم الضريبي EIN'],['Operating Agreement','اتفاقية التشغيل'],['Registered Agent','الوكيل المسجل'],['Business Address','العنوان التجاري الأمريكي'],['Banking Support','دعم فتح الحسابات البنكية'],['Compliance Filing','إيداع تقارير الامتثال']
+  ['EIN Acquisition','استخراج الرقم الضريبي EIN'],['Operating Agreement','اتفاقية التشغيل'],['Registered Agent','الوكيل المسجل'],['Nexus & Address','العنوان التجاري والربط'],['Banking Framework','إطار العمل البنكي'],['Compliance Governance','حوكمة الامتثال']
 ];
 
 export const why = [
-  ['Expert Guidance','Navigating U.S. regulations with ease.'],['Direct Access','Real-time support via WhatsApp.'],['Global Reach','Supporting founders from 50+ countries.']
+  ['Technical Precision','Navigating complex U.S. regulations with institutional accuracy.'],['Strategic Access','Direct, real-time specialist support via WhatsApp.'],['Global Standard','Trusted by founders across 50+ jurisdictions for U.S. expansion.']
 ];
 
 export const faqs = [
-  ['What is an EIN and why do I need it?','An EIN is a Federal Tax ID required to open a U.S. bank account and hire employees.','ما هو الـ EIN ولماذا أحتاجه؟','هو الرقم الضريبي الفيدرالي، وضروري لفتح حساب بنكي أمريكي وتوظيف الموظفين.'],
-  ['Which state is best for my business?','Delaware and Wyoming are popular for different reasons. We help you choose based on your goals.','أي ولاية هي الأفضل لعملي؟','ديلاوير ووايومنج هما الأكثر شهرة لأسباب مختلفة. نساعدك في الاختيار بناءً على أهدافك.'],
-  ['How long does the process take?','Formation times vary by state, typically ranging from a few days to several weeks.','كم تستغرق عملية التأسيس؟','تختلف المدة حسب الولاية، وتتراوح عادة من بضعة أيام إلى عدة أسابيع.'],
-  ['Do I need to be in the U.S. to start?','No. We specialize in helping international founders form companies remotely.','هل أحتاج للتواجد في أمريكا للبدء؟','لا. نحن متخصصون في مساعدة المؤسسين الدوليين على التأسيس عن بُعد.'],
-  ['What are my annual requirements?','Most states require an Annual Report and a Registered Agent to remain in good standing.','ما هي المتطلبات السنوية؟','تطلب معظم الولايات تقريراً سنوياً ووكيلاً مسجلاً للحفاظ على وضع الشركة القانوني.']
+  ['What is the strategic importance of an EIN?','An EIN is your entity\'s primary identifier for U.S. tax, banking, and employment infrastructure.','ما هي الأهمية الاستراتيجية للـ EIN؟','هو المعرف الأساسي لكيانك في الأنظمة الضريبية والبنكية والتوظيف في أمريكا.'],
+  ['How do you determine the optimal jurisdiction?','We analyze your business model against state-specific tax laws and legal protections (e.g., DE vs. WY).','كيف يتم تحديد الولاية المثلى؟','نحلل نموذج عملك مقابل قوانين الضرائب والحماية القانونية في كل ولاية (مثل ديلاوير مقابل وايومنج).'],
+  ['What is the timeline for institutional readiness?','Formation timelines vary by state; we optimize for the fastest possible regulatory approval.','ما هو الجدول الزمني للجاهزية المؤسسية؟','تختلف جداول التأسيس حسب الولاية؛ نحن نعمل على تسريع الموافقات التنظيمية قدر الإمكان.'],
+  ['Can international founders maintain 100% remote control?','Yes. Our infrastructure is designed for global founders to manage U.S. entities without physical presence.','هل يمكن للمؤسسين الدوليين الإدارة عن بُعد بنسبة 100%؟','نعم. بنيتنا التحتية مصممة لتمكين المؤسسين من إدارة كياناتهم الأمريكية دون تواجد فعلي.'],
+  ['What are the ongoing compliance obligations?','Entities must maintain a Registered Agent and file Annual Reports to remain in "Good Standing" with the state.','ما هي التزامات الامتثال المستمرة؟','يجب على الكيانات الحفاظ على وكيل مسجل وإيداع التقارير السنوية للحفاظ على وضعها القانوني السليم.']
 ];
