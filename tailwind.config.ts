@@ -37,8 +37,39 @@ const config: Config = {
         'content': '1280px',
         'product': '1440px',
       },
-      boxShadow: { soft: '0 24px 80px rgba(31, 23, 86, .14)' }, 
-      colors: { ink: '#120E45', violet: '#2B1688', lavender: '#EDE9FF' } 
+      colors: {
+        primary: {
+          DEFAULT: '#FCD535',
+          active: '#f0b90b',
+          disabled: '#3a3a1f',
+        },
+        canvas: {
+          dark: '#0b0e11',
+          light: '#ffffff',
+        },
+        surface: {
+          card: '#1e2329',
+          elevated: '#2b3139',
+          soft: '#fafafa',
+        },
+        ink: '#181a20',
+        body: '#eaecef',
+        muted: {
+          DEFAULT: '#707a8a',
+          strong: '#929aa5',
+        },
+        trading: {
+          up: '#0ecb81',
+          down: '#f6465d',
+        },
+        hairline: {
+          light: '#eaecef',
+          dark: '#2b3139',
+        }
+      },
+      boxShadow: {
+        soft: '0 24px 80px rgba(0, 0, 0, .4)',
+      }
     } 
   }, 
   plugins: [] 
