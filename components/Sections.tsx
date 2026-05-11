@@ -204,23 +204,20 @@ export function FAQ({lang}:{lang:Lang}){
   );
 }
 
+import { FeatureHighlightCard } from "@/components/ui/feature-highlight-card";
+
 export function FinalCTA({lang}:{lang:Lang}){
   const c = copy[lang];
   return (
-    <section className="px-md py-section" dir={lang==='ar'?'rtl':'ltr'}>
-      <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl bg-primary p-lg text-center text-ink shadow-soft-lg md:p-xl group">
-        {/* Subtle Background Pattern for CTA */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '16px 16px'}}></div>
-        
-        <div className="relative z-10">
-          <h2 className="text-display-sm font-bold text-ink leading-tight md:text-display-md">{c.finalTitle}</h2>
-          <p className="mx-auto mt-md max-w-lg text-body-sm font-medium text-ink/70">{c.finalText}</p>
-          <a href={whatsappLink(packageMessage())} className="mt-lg inline-flex items-center gap-xs rounded bg-ink px-xl py-2 text-xs font-bold text-white hover:bg-ink/90 transition-all active:scale-95 shadow-lg">
-            {c.cta}
-            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"/>
-          </a>
-        </div>
-      </div>
+    <section className="px-md py-section flex justify-center" dir={lang==='ar'?'rtl':'ltr'}>
+      <FeatureHighlightCard
+        imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+        imageAlt="U.S. Business Infrastructure"
+        title={c.finalTitle}
+        description={c.finalText}
+        buttonText={c.cta}
+        onButtonClick={() => window.location.href = whatsappLink(packageMessage())}
+      />
     </section>
   );
 }
