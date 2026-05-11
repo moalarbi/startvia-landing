@@ -8,9 +8,10 @@ interface RevealProps {
   width?: "fit-content" | "100%";
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
+  className?: string;
 }
 
-export const Reveal = ({ children, width = "100%", delay = 0, direction = "up" }: RevealProps) => {
+export const Reveal = ({ children, width = "100%", delay = 0, direction = "up", className }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const mainControls = useAnimation();
@@ -34,7 +35,7 @@ export const Reveal = ({ children, width = "100%", delay = 0, direction = "up" }
   const offset = getDirectionOffset();
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} className={className} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: offset.y, x: offset.x },
