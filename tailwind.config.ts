@@ -8,15 +8,17 @@ const config: Config = {
         sans: ['Thmanyah', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['64px', { lineHeight: '1.1', letterSpacing: '-1px', fontWeight: '700' }],
-        'display-lg': ['48px', { lineHeight: '1.1', letterSpacing: '-0.5px', fontWeight: '700' }],
-        'display-md': ['40px', { lineHeight: '1.15', letterSpacing: '-0.3px', fontWeight: '600' }],
-        'display-sm': ['32px', { lineHeight: '1.2', fontWeight: '600' }],
-        'title-lg': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
-        'title-md': ['20px', { lineHeight: '1.35', fontWeight: '600' }],
-        'title-sm': ['16px', { lineHeight: '1.4', fontWeight: '600' }],
-        'body-md': ['14px', { lineHeight: '1.5', fontWeight: '400' }],
-        'body-sm': ['13px', { lineHeight: '1.5', fontWeight: '400' }],
+        // Reduced sizes for a more professional/global look
+        'hero': ['48px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'display-lg': ['36px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'display-md': ['30px', { lineHeight: '1.2', fontWeight: '600' }],
+        'display-sm': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
+        'title-lg': ['20px', { lineHeight: '1.4', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
+        'title-sm': ['16px', { lineHeight: '1.5', fontWeight: '600' }],
+        'body-md': ['14px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '1.6', fontWeight: '400' }],
+        'xs': ['12px', { lineHeight: '1.6', fontWeight: '400' }],
       },
       spacing: {
         'xxs': '4px',
@@ -26,16 +28,18 @@ const config: Config = {
         'lg': '24px',
         'xl': '32px',
         'xxl': '48px',
-        'section': '80px',
+        'section': '100px', // Increased section padding for better breathing
       },
       borderRadius: {
-        'md': '6px',
-        'lg': '8px',
-        'xl': '12px',
+        'sm': '4px',
+        'md': '8px',
+        'lg': '12px',
+        'xl': '16px',
+        '2xl': '24px',
       },
       maxWidth: {
-        'content': '1280px',
-        'product': '1440px',
+        'content': '1100px', // Slightly narrower for better readability
+        'product': '1280px',
       },
       colors: {
         primary: {
@@ -68,7 +72,8 @@ const config: Config = {
         }
       },
       boxShadow: {
-        soft: '0 24px 80px rgba(0, 0, 0, .4)',
+        soft: '0 8px 32px rgba(0, 0, 0, .3)',
+        'soft-lg': '0 24px 64px rgba(0, 0, 0, .5)',
       }
     } 
   }, 

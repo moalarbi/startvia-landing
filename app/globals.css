@@ -26,22 +26,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Thmanyah';
-  src: url('/fonts/thmanyahsans-Black.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Thmanyah';
-  src: url('/fonts/thmanyahsans-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root { color-scheme: dark; }
 html { scroll-behavior: smooth; }
 body { 
@@ -50,53 +34,56 @@ body {
   background: #0b0e11; 
   font-family: 'Thmanyah', sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: #ffffff;
+  letter-spacing: -0.01em;
 }
 
 section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 768px) {
   section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
-* { box-sizing: border-box; }
-
 .glass { 
-  background: rgba(30, 35, 41, 0.8); 
-  backdrop-filter: blur(18px); 
-  border: 1px solid #2b3139; 
+  background: rgba(30, 35, 41, 0.7); 
+  backdrop-filter: blur(12px); 
+  border: 1px solid rgba(43, 49, 57, 0.5); 
 }
 
-.card-hover { 
-  transition: transform .25s ease, box-shadow .25s ease; 
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-xs rounded-md bg-primary px-lg py-md text-body-sm font-bold text-ink transition-all hover:bg-primary-active active:scale-95 shadow-sm;
 }
 
-.card-hover:hover { 
-  transform: translateY(-4px); 
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); 
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-xs rounded-md border border-hairline-dark bg-surface-card px-lg py-md text-body-sm font-bold text-white transition-all hover:bg-surface-elevated active:scale-95;
+}
+
+.card-official {
+  @apply rounded-xl border border-hairline-dark bg-surface-card p-lg transition-all hover:border-muted/30 hover:shadow-soft;
 }
 
 /* Binance Style Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: #0b0e11;
 }
 ::-webkit-scrollbar-thumb {
   background: #2b3139;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #707a8a;
