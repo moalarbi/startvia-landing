@@ -9,7 +9,7 @@ export function TrustStrip({lang}:{lang:Lang}){
       <div className="mx-auto max-w-content px-md">
         <div className="flex flex-wrap items-center justify-center gap-lg md:justify-between opacity-50">
           {copy[lang].trust.map((t, i)=>(
-            <div key={t} className="flex items-center gap-xs text-[11px] font-bold tracking-wider text-muted uppercase">
+            <div key={t} className="flex items-center gap-xs text-[11px] font-bold tracking-wider text-muted uppercase hover:text-primary transition-colors cursor-default">
               <span className="text-primary">/</span>
               {t}
             </div>
@@ -30,7 +30,7 @@ export function CompanyTypes({lang}:{lang:Lang}){
       </div>
       <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
         {companyTypes.map(t=>(
-          <div key={t.key} className="card-official group">
+          <div key={t.key} className="card-official group hover:-translate-y-1 transition-all duration-300">
             <div className="grid h-10 w-10 place-items-center rounded bg-canvas-dark border border-hairline-dark text-primary font-bold text-title-sm shadow-inner group-hover:bg-primary group-hover:text-ink transition-all">
               {t.key[0]}
             </div>
@@ -55,11 +55,11 @@ export function HowItWorks({lang}:{lang:Lang}){
         <h2 className="text-center text-display-sm font-bold text-white mb-xl">{copy[lang].howTitle}</h2>
         <div className="grid gap-lg md:grid-cols-4">
           {steps.map((s,i)=>(
-            <div key={i} className="relative flex flex-col items-center text-center">
-              <div className="grid h-12 w-12 place-items-center rounded-full border border-hairline-dark bg-canvas-dark text-primary text-title-sm font-bold shadow-sm">
+            <div key={i} className="relative flex flex-col items-center text-center group">
+              <div className="grid h-12 w-12 place-items-center rounded-full border border-hairline-dark bg-canvas-dark text-primary text-title-sm font-bold shadow-sm group-hover:border-primary/50 transition-colors">
                 {i+1}
               </div>
-              <p className="mt-md text-body-sm font-bold text-white">
+              <p className="mt-md text-body-sm font-bold text-white group-hover:text-primary transition-colors">
                 {lang==='en'?s.en:s.ar}
               </p>
             </div>
@@ -81,7 +81,7 @@ export function Pricing({lang}:{lang:Lang}){
       </div>
       <div className="grid gap-md lg:grid-cols-3">
         {packages.map(p=>(
-          <div key={p.name} className={`flex flex-col rounded-xl p-lg border transition-all duration-300 ${p.popular?'bg-surface-elevated border-primary/50 shadow-soft-lg':'bg-surface-card border-hairline-dark'}`}>
+          <div key={p.name} className={`flex flex-col rounded-xl p-lg border transition-all duration-300 hover:shadow-soft-lg ${p.popular?'bg-surface-elevated border-primary/50 shadow-soft-lg scale-[1.02]':'bg-surface-card border-hairline-dark hover:border-muted/30'}`}>
             <div className="mb-md">
               <div className="flex items-center justify-between">
                 <h3 className="text-title-sm font-bold text-white">{p.name}</h3>
@@ -121,8 +121,8 @@ export function AddOns({lang}:{lang:Lang}){
         <h2 className="text-center text-display-sm font-bold text-white mb-xl">{copy[lang].addTitle}</h2>
         <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3">
           {addOns.map((a,i)=>(
-            <div key={i} className="flex items-center gap-sm rounded-lg border border-hairline-dark bg-surface-card p-md hover:border-primary/20 transition-all">
-              <Zap size={14} className="text-primary shrink-0"/>
+            <div key={i} className="flex items-center gap-sm rounded-lg border border-hairline-dark bg-surface-card p-md hover:border-primary/40 hover:bg-surface-elevated transition-all cursor-default group">
+              <Zap size={14} className="text-primary shrink-0 group-hover:scale-110 transition-transform"/>
               <span className="text-xs font-bold text-body">{lang==='en'?a[0]:a[1]}</span>
             </div>
           ))}
@@ -139,8 +139,8 @@ export function WhyUs({lang}:{lang:Lang}){
       <h2 className="text-center text-display-sm font-bold text-white mb-xl">{copy[lang].whyTitle}</h2>
       <div className="grid gap-md md:grid-cols-3">
         {why.map((w,i)=>(
-          <div key={i} className="card-official">
-            <div className="mb-md text-primary">
+          <div key={i} className="card-official group">
+            <div className="mb-md text-primary group-hover:scale-110 transition-transform">
               {icons[i]}
             </div>
             <h3 className="text-title-sm font-bold text-white">{w[0]}</h3>
@@ -159,7 +159,7 @@ export function FAQ({lang}:{lang:Lang}){
         <h2 className="text-center text-display-sm font-bold text-white mb-xl">{copy[lang].faqTitle}</h2>
         <div className="space-y-sm">
           {faqs.map((f,i)=>(
-            <details key={i} className="group rounded-lg border border-hairline-dark bg-surface-card transition-all">
+            <details key={i} className="group rounded-lg border border-hairline-dark bg-surface-card transition-all hover:border-muted/20">
               <summary className="flex cursor-pointer items-center justify-between p-md text-body-sm font-bold text-white hover:text-primary">
                 <div className="flex items-center gap-xs">
                   <HelpCircle size={16} className="text-muted group-open:text-primary"/>
@@ -167,7 +167,7 @@ export function FAQ({lang}:{lang:Lang}){
                 </div>
                 <span className="text-[10px] text-muted group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <div className="px-md pb-md text-xs leading-relaxed text-muted border-t border-hairline-dark/30 pt-sm">
+              <div className="px-md pb-md text-xs leading-relaxed text-muted border-t border-hairline-dark/30 pt-sm animate-in fade-in duration-300">
                 {lang==='en'?f[1]:f[3]}
               </div>
             </details>
@@ -182,12 +182,12 @@ export function FinalCTA({lang}:{lang:Lang}){
   const c = copy[lang];
   return (
     <section className="px-md py-section" dir={lang==='ar'?'rtl':'ltr'}>
-      <div className="mx-auto max-w-4xl rounded-2xl bg-primary p-lg text-center text-ink shadow-soft-lg md:p-xl">
+      <div className="mx-auto max-w-4xl rounded-2xl bg-primary p-lg text-center text-ink shadow-soft-lg md:p-xl group">
         <h2 className="text-display-sm font-bold text-ink leading-tight">{c.finalTitle}</h2>
         <p className="mx-auto mt-md max-w-lg text-body-sm font-medium text-ink/70">{c.finalText}</p>
-        <a href={whatsappLink(packageMessage())} className="mt-lg inline-flex items-center gap-xs rounded bg-ink px-xl py-md text-body-sm font-bold text-white hover:bg-ink/90 transition-all active:scale-95">
+        <a href={whatsappLink(packageMessage())} className="mt-lg inline-flex items-center gap-xs rounded bg-ink px-xl py-md text-body-sm font-bold text-white hover:bg-ink/90 transition-all active:scale-95 shadow-lg">
           {c.cta}
-          <ArrowUpRight size={16}/>
+          <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
         </a>
       </div>
     </section>

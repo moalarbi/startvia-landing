@@ -2,16 +2,23 @@
 import { ArrowRight, MessageCircle, ShieldCheck, Zap, Globe } from 'lucide-react';
 import { copy, Lang } from '@/data/content';
 import { whatsappLink, packageMessage } from '@/lib/whatsapp';
+import { useEffect, useState } from 'react';
 
 export default function Hero({lang}:{lang:Lang}){
   const c = copy[lang];
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-canvas-dark pt-[140px] pb-xl" dir={lang==='ar'?'rtl':'ltr'}>
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 z-0 opacity-[0.03]" 
            style={{backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px'}}></div>
       
-      <div className="relative z-10 mx-auto max-w-content px-md">
+      <div className={`relative z-10 mx-auto max-w-content px-md transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="flex flex-col items-center text-center">
           <h1 className="max-w-3xl text-display-md font-bold tracking-tight text-white md:text-hero leading-[1.15]">
             {c.heroTitle.split(' ').map((word, i) => 
@@ -24,13 +31,13 @@ export default function Hero({lang}:{lang:Lang}){
           </p>
 
           <div className="mt-lg flex flex-col items-center justify-center gap-sm sm:flex-row">
-            <a href={whatsappLink(packageMessage())} className="btn-primary px-xl">
-              <MessageCircle size={16}/>
+            <a href={whatsappLink(packageMessage())} className="btn-primary px-xl group">
+              <MessageCircle size={16} className="group-hover:scale-110 transition-transform"/>
               {c.cta}
             </a>
-            <a href="#pricing" className="btn-secondary px-xl">
+            <a href="#pricing" className="btn-secondary px-xl group">
               {c.viewPackages}
-              <ArrowRight size={16} className={lang==='ar'?'rotate-180':''}/>
+              <ArrowRight size={16} className={`transition-transform group-hover:translate-x-1 ${lang==='ar'?'rotate-180 group-hover:-translate-x-1':''}`}/>
             </a>
           </div>
 
@@ -52,7 +59,7 @@ export default function Hero({lang}:{lang:Lang}){
         </div>
 
         {/* Professional Dashboard Mockup - Smaller & More Refined */}
-        <div className="mt-xxl relative mx-auto max-w-3xl rounded-xl border border-hairline-dark bg-surface-card/20 p-xs shadow-soft-lg backdrop-blur-sm">
+        <div className={`mt-xxl relative mx-auto max-w-3xl rounded-xl border border-hairline-dark bg-surface-card/20 p-xs shadow-soft-lg backdrop-blur-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="overflow-hidden rounded-lg border border-hairline-dark bg-canvas-dark shadow-inner">
             <div className="flex items-center gap-xs border-b border-hairline-dark bg-surface-card px-md py-xs">
               <div className="flex gap-xs">
@@ -64,7 +71,7 @@ export default function Hero({lang}:{lang:Lang}){
             </div>
             <div className="grid grid-cols-12 gap-sm p-md">
               <div className="col-span-3 space-y-sm">
-                <div className="h-16 rounded bg-surface-card/50"></div>
+                <div className="h-16 rounded bg-surface-card/50 animate-pulse"></div>
                 <div className="h-32 rounded bg-surface-card/30"></div>
               </div>
               <div className="col-span-9 space-y-sm">
