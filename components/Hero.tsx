@@ -6,7 +6,7 @@ import { whatsappLink, packageMessage } from '@/lib/whatsapp';
 export default function Hero({lang}:{lang:Lang}){
   const c = copy[lang];
   return (
-    <section className="relative overflow-hidden bg-canvas-dark pt-xxl pb-section" dir={lang==='ar'?'rtl':'ltr'}>
+    <section className="relative overflow-hidden bg-canvas-dark pt-[160px] pb-section" dir={lang==='ar'?'rtl':'ltr'}>
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 z-0 opacity-20" 
            style={{backgroundImage: 'radial-gradient(#2b3139 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
