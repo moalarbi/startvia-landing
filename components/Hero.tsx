@@ -16,13 +16,7 @@ export default function Hero({lang}:{lang:Lang}){
 
       <div className="relative z-10 mx-auto max-w-content px-md">
         <div className="flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-xs rounded-full border border-hairline-dark bg-surface-card/50 px-md py-xs text-body-sm font-bold text-primary backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
-            </span>
-            {c.heroBadge}
-          </div>
+
           
           <h1 className="mt-lg max-w-4xl text-display-md font-bold tracking-tight text-white md:text-hero leading-[1.1]">
             {c.heroTitle.split(' ').map((word, i) => 
