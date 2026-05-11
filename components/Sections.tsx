@@ -2,6 +2,8 @@
 import { ArrowUpRight, Check, HelpCircle, Star, Zap, Shield, Clock, BarChart3, Globe2, Scale } from 'lucide-react';
 import { addOns, companyTypes, copy, faqs, Lang, packages, steps, why } from '@/data/content';
 import { packageMessage, whatsappLink } from '@/lib/whatsapp';
+import { LandingAccordionItem } from "@/components/ui/interactive-image-accordion";
+import { FeatureHighlightCard } from "@/components/ui/feature-highlight-card";
 
 export function TrustStrip({lang}:{lang:Lang}){
   return (
@@ -21,31 +23,7 @@ export function TrustStrip({lang}:{lang:Lang}){
 }
 
 export function CompanyTypes({lang}:{lang:Lang}){
-  const c = copy[lang];
-  return (
-    <section id="types" className="mx-auto max-w-content px-md py-section" dir={lang==='ar'?'rtl':'ltr'}>
-      <div className="flex flex-col items-center text-center mb-xl">
-        <h2 className="text-display-sm font-bold text-white md:text-display-md">{c.companyTitle}</h2>
-        <p className="mt-sm max-w-2xl text-body-sm text-muted md:text-body-md">{c.companyText}</p>
-      </div>
-      <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
-        {companyTypes.map(t=>(
-          <div key={t.key} className="card-official group hover:-translate-y-1 transition-all duration-500 flex flex-col">
-            <div className="grid h-10 w-10 place-items-center rounded bg-canvas-dark border border-hairline-dark text-primary font-bold text-title-sm shadow-inner group-hover:bg-primary group-hover:text-ink transition-all">
-              {t.key[0]}
-            </div>
-            <h3 className="mt-md text-title-sm font-bold text-white">{t.key}</h3>
-            <p className="mt-sm flex-grow text-body-sm leading-relaxed text-muted">
-              {lang==='en'?t.en:t.ar}
-            </p>
-            <a href={whatsappLink(packageMessage(undefined,t.key))} className="mt-md inline-flex items-center gap-xs font-bold text-primary text-xs hover:gap-sm transition-all">
-              {c.cta}<ArrowUpRight size={14}/>
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+  return <LandingAccordionItem lang={lang} />;
 }
 
 export function HowItWorks({lang}:{lang:Lang}){
@@ -123,7 +101,6 @@ export function BentoFeatures({lang}:{lang:Lang}){
           <h2 className="text-display-sm font-bold text-white">{c.addTitle}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
-          {/* Bento Grid Layout */}
           <div className="md:col-span-2 card-official flex flex-col md:flex-row gap-md items-center">
             <div className="p-md bg-primary/5 rounded-lg border border-primary/10">
               <BarChart3 size={32} className="text-primary"/>
@@ -203,8 +180,6 @@ export function FAQ({lang}:{lang:Lang}){
     </section>
   );
 }
-
-import { FeatureHighlightCard } from "@/components/ui/feature-highlight-card";
 
 export function FinalCTA({lang}:{lang:Lang}){
   const c = copy[lang];
