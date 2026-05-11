@@ -1,65 +1,97 @@
 'use client';
-import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, ShieldCheck, Zap, Globe } from 'lucide-react';
 import { copy, Lang } from '@/data/content';
 import { whatsappLink, packageMessage } from '@/lib/whatsapp';
 
 export default function Hero({lang}:{lang:Lang}){
   const c = copy[lang];
   return (
-    <section className="mx-auto grid max-w-content items-center gap-lg px-md pb-xxl pt-xl md:grid-cols-2 md:pt-section" dir={lang==='ar'?'rtl':'ltr'}>
-      <div className="text-center md:text-start">
-        <span className="inline-flex rounded-full bg-surface-elevated px-md py-xs text-body-sm font-bold text-primary shadow-sm">✦ {c.heroBadge}</span>
-        <h1 className="mt-md text-display-sm font-bold tracking-tight text-white md:text-hero leading-tight">
-          {c.heroTitle.split(' ').map((word, i) => 
-            word.toLowerCase().includes('startvia') || i > 2 ? <span key={i} className="text-primary"> {word}</span> : <span key={i}> {word}</span>
-          )}
-        </h1>
-        <p className="mx-auto mt-md max-w-2xl text-body-md text-body/65 md:mx-0">{c.heroText}</p>
-        <div className="mt-xl flex flex-col justify-center gap-sm sm:flex-row md:justify-start">
-          <a href={whatsappLink(packageMessage())} className="inline-flex items-center justify-center gap-xs rounded-md bg-primary px-lg py-md text-body-md font-bold text-ink hover:bg-primary-active transition-colors shadow-lg shadow-primary/10">
-            <MessageCircle size={18}/>{c.cta}
-          </a>
-          <a href="#pricing" className="inline-flex items-center justify-center gap-xs rounded-md bg-surface-card px-lg py-md text-body-md font-bold text-white shadow-sm border border-hairline-dark hover:bg-surface-elevated transition-colors">
-            {c.viewPackages}<ArrowRight size={18}/>
-          </a>
-        </div>
-      </div>
-      <div className="relative min-h-[520px] hidden md:block">
-        <div className="absolute left-2 top-6 w-72 rounded-xl bg-surface-card p-lg shadow-soft border border-hairline-dark">
-          <p className="text-title-sm font-bold text-white">Company Type</p>
-          {['LLC','C-Corp','S-Corp'].map((x,i)=>(
-            <div key={x} className="mt-md flex items-center gap-sm rounded-lg border border-hairline-dark p-md bg-canvas-dark">
-              <span className={`h-3 w-3 rounded-full ${i===0?'bg-primary':'bg-surface-elevated'}`}/>
-              <span className="text-body-md font-semibold text-body">{x}</span>
+    <section className="relative overflow-hidden bg-canvas-dark pt-xxl pb-section" dir={lang==='ar'?'rtl':'ltr'}>
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 z-0 opacity-20" 
+           style={{backgroundImage: 'radial-gradient(#2b3139 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
+      
+      {/* Glow Effect */}
+      <div className="absolute -top-24 left-1/2 z-0 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
+
+      <div className="relative z-10 mx-auto max-w-content px-md">
+        <div className="flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-xs rounded-full border border-hairline-dark bg-surface-card/50 px-md py-xs text-body-sm font-bold text-primary backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+            </span>
+            {c.heroBadge}
+          </div>
+          
+          <h1 className="mt-lg max-w-4xl text-display-md font-bold tracking-tight text-white md:text-hero leading-[1.1]">
+            {c.heroTitle.split(' ').map((word, i) => 
+              word.toLowerCase().includes('startvia') || i > 2 ? <span key={i} className="text-primary"> {word}</span> : <span key={i}> {word}</span>
+            )}
+          </h1>
+          
+          <p className="mt-lg max-w-2xl text-title-sm text-muted leading-relaxed md:text-title-md">
+            {c.heroText}
+          </p>
+
+          <div className="mt-xl flex flex-col items-center justify-center gap-md sm:flex-row">
+            <a href={whatsappLink(packageMessage())} className="group relative inline-flex items-center justify-center gap-xs overflow-hidden rounded-md bg-primary px-xl py-md text-body-md font-bold text-ink transition-all hover:bg-primary-active shadow-lg shadow-primary/20">
+              <MessageCircle size={20}/>
+              {c.cta}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"></div>
+            </a>
+            <a href="#pricing" className="inline-flex items-center justify-center gap-xs rounded-md border border-hairline-dark bg-surface-card px-xl py-md text-body-md font-bold text-white transition-all hover:bg-surface-elevated">
+              {c.viewPackages}
+              <ArrowRight size={20} className={lang==='ar'?'rotate-180':''}/>
+            </a>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-xxl grid grid-cols-2 gap-lg opacity-50 md:grid-cols-3 lg:gap-xxl">
+            <div className="flex items-center gap-sm text-body-sm font-medium text-body">
+              <ShieldCheck size={20} className="text-primary"/>
+              <span>Secure Formation</span>
             </div>
-          ))}
-        </div>
-        <div className="absolute right-0 top-0 w-72 rounded-xl bg-surface-elevated p-lg text-white shadow-soft border border-primary/20">
-          <p className="text-body-sm text-muted">Timeline</p>
-          <h3 className="mt-xs text-title-lg font-bold text-primary">Formation Journey</h3>
-          {['Choose Package','WhatsApp Onboarding','Document Checklist','Launch Ready'].map((x)=>(
-            <div key={x} className="mt-md flex items-center gap-sm">
-              <CheckCircle2 size={18} className="text-trading-up"/>
-              <span className="text-body-md text-body">{x}</span>
+            <div className="flex items-center gap-sm text-body-sm font-medium text-body">
+              <Zap size={20} className="text-primary"/>
+              <span>Fast Processing</span>
             </div>
-          ))}
-        </div>
-        <div className="absolute bottom-8 left-10 w-[330px] rounded-xl bg-surface-card p-xl shadow-soft border border-hairline-dark">
-          <p className="text-title-sm font-bold text-white">Growth Formation</p>
-          <div className="mt-xs text-display-md font-bold text-primary">$399</div>
-          <p className="mt-md text-body-sm text-muted">Most popular setup for founders.</p>
-          <div className="mt-lg h-3 rounded-full bg-canvas-dark">
-            <div className="h-3 w-2/3 rounded-full bg-primary"/>
+            <div className="flex items-center gap-sm text-body-sm font-medium text-body md:col-span-1 col-span-2 justify-center">
+              <Globe size={20} className="text-primary"/>
+              <span>Global Support</span>
+            </div>
           </div>
         </div>
-        <div className="absolute bottom-0 right-8 w-64 rounded-lg bg-surface-elevated/80 p-md shadow-soft backdrop-blur border border-hairline-dark">
-          <div className="flex items-center gap-sm">
-            <MessageCircle className="text-primary"/>
-            <div>
-              <p className="text-body-md font-bold text-white">WhatsApp Support</p>
-              <p className="text-body-sm text-muted">Manual onboarding after CTA.</p>
+
+        {/* Floating Elements / Mockup Area */}
+        <div className="mt-xxl relative mx-auto max-w-4xl rounded-2xl border border-hairline-dark bg-surface-card/30 p-sm shadow-2xl backdrop-blur-sm">
+          <div className="overflow-hidden rounded-xl border border-hairline-dark bg-canvas-dark shadow-inner">
+            <div className="flex items-center gap-xs border-b border-hairline-dark bg-surface-card px-md py-sm">
+              <div className="flex gap-xs">
+                <div className="h-3 w-3 rounded-full bg-trading-down/50"></div>
+                <div className="h-3 w-3 rounded-full bg-primary/50"></div>
+                <div className="h-3 w-3 rounded-full bg-trading-up/50"></div>
+              </div>
+              <div className="mx-auto rounded bg-canvas-dark px-xl py-xs text-[10px] text-muted">startvia.app/dashboard</div>
+            </div>
+            <div className="grid grid-cols-12 gap-md p-lg">
+              <div className="col-span-4 space-y-md">
+                <div className="h-24 rounded-lg bg-surface-card animate-pulse"></div>
+                <div className="h-48 rounded-lg bg-surface-card/50"></div>
+              </div>
+              <div className="col-span-8 space-y-md">
+                <div className="h-12 rounded-lg bg-primary/10 border border-primary/20"></div>
+                <div className="grid grid-cols-2 gap-md">
+                  <div className="h-32 rounded-lg bg-surface-card"></div>
+                  <div className="h-32 rounded-lg bg-surface-card"></div>
+                </div>
+                <div className="h-24 rounded-lg bg-surface-card/30"></div>
+              </div>
             </div>
           </div>
+          {/* Decorative Orbs */}
+          <div className="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-primary/20 blur-2xl"></div>
+          <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-trading-up/10 blur-2xl"></div>
         </div>
       </div>
     </section>
